@@ -6,17 +6,11 @@ def programQuit():
 
 def isOdd(number):
   remainder = number % 2
-  if(remainder == 1):
-    return True
-  else:
-    return False
+  return (remainder == 1)
 
 def isEven(number):
   remainder = number % 2
-  if(remainder == 0):
-    return True
-  else:
-    return False
+  return (remainder == 0)
 
 def main():
   os.system("clear")
@@ -52,16 +46,16 @@ Please do not add decimal points to your number.
   print("Hailstone:")
   print(currentNumber)
   while running:
-    if(currentNumber == 1):
+    if (currentNumber == 1):
       running =  False
-    elif(isEven(currentNumber)):
-      currentNumber = currentNumber / 2
+    elif (isEven(currentNumber)):
+      currentNumber /= 2
       print(currentNumber)
-    elif(isOdd(currentNumber)):
-      currentNumber = currentNumber * 3
-      currentNumber = currentNumber + 1
+    elif (isOdd(currentNumber)):
+      currentNumber *= 3
+      currentNumber += 1
       print(currentNumber)
-    
+
   programQuit()
   main()
 main()
